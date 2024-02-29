@@ -167,5 +167,5 @@ resource "aws_instance" "api_instance" {
   user_data              = file("api-user-data.sh")
   key_name               = var.ssh_key
 
-  depends_on = [aws_internet_gateway.igw]
+  depends_on = [aws_internet_gateway.igw, aws_instance.db_instance]
 }

@@ -1,4 +1,4 @@
-from app import FastAPI
+from fastapi import FastAPI
 from typing import List
 from fastapi.middleware.cors import CORSMiddleware
 import mysql.connector
