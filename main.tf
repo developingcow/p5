@@ -156,7 +156,7 @@ resource "aws_instance" "db_instance" {
 
   private_ip = "10.0.2.15" # static private ip
 
-  depends_on = [aws_internet_gateway.igw]
+  depends_on = [aws_nat_gateway.nat]
 }
 
 resource "aws_instance" "api_instance" {
@@ -167,5 +167,5 @@ resource "aws_instance" "api_instance" {
   user_data              = file("api-user-data.sh")
   key_name               = var.ssh_key
 
-  depends_on = [aws_nat_gateway.nat]
+  depends_on = [aws_internet_gateway.igw]
 }

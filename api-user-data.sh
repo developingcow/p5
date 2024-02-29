@@ -19,4 +19,4 @@ git clone https://github.com/developingcow/p5.git
 cd p5
 
 # run the app
-uvicorn fastapi:app --host 0.0.0.0 --port 1234
+uvicorn app:app --host 0.0.0.0 --port 1234
